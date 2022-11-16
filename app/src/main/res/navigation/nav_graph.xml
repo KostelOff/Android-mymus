@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listMusicFragment">
+
+    <fragment
+        android:id="@+id/listMusicFragment"
+        android:name="ru.kosteloff.mymus.screens.ListMusicFragment"
+        android:label="fragment_list_music"
+        tools:layout="@layout/fragment_list_music" >
+        <action
+            android:id="@+id/action_listMusicFragment_to_musicPlayFragment"
+            app:destination="@id/musicPlayFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/musicPlayFragment"
+        android:name="ru.kosteloff.mymus.screens.MusicPlayFragment"
+        android:label="MusicPlayFragment" >
+        <action
+            android:id="@+id/action_musicPlayFragment_to_listMusicFragment"
+            app:destination="@id/listMusicFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <argument
+            android:name="song"
+            app:argType="ru.kosteloff.mymus.model.SongModel"
+            app:nullable="true" />
+    </fragment>
+</navigation>
