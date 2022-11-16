@@ -41,7 +41,7 @@
             android:background="@android:color/transparent"
             android:contentDescription="@string/image"
             android:scaleType="centerCrop"
-            android:src="@drawable/agnia" />
+            android:src="@drawable/girl" />
     </androidx.cardview.widget.CardView>
 
     <TextView
